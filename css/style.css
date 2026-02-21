@@ -1,0 +1,239 @@
+/* paleta de colores
+#ffbc0d amarillo 
+#8E1616 bordo
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: white;
+}
+
+/* Header */
+
+/* header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top:0;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-right: 8px;
+   
+}
+nav{
+    width: 25%;
+}
+
+ */
+header img{
+    width: 70px;
+    margin: 8px;
+}
+
+.menu{
+    color: #8E1616;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.h-1{
+    font-family: cursive;
+
+}
+.nav-fondo{
+    background-color: palevioletred;
+}
+
+/* media q de header */
+
+/* Main index */
+.presentacion{
+    background-image: url(../img/fondo.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentacion div{
+    width: 30%;
+    text-align: center;
+}
+.presentacion h1{
+    color: white ;
+    text-shadow: 6px 1px 4px rgba(142,22,22,0.6);
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.presentacion p{
+    color: #8E1616;
+}
+
+/* MQ del main de index */
+
+
+/* Sucursales                      */
+.contenedor-grid img{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-grid{
+    display: grid;
+    /* generar la cuadricula */
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "burger texto1 texto1"
+    "burger  papas texto2"
+    "burger texto3 texto3";
+
+    /* cantidad y el tamaño de las columnas */
+    grid-template-columns: 20% 40% 30%;
+
+    /* cantidad y el tamaño de las filas */
+    grid-template-rows: 80px 100px 200px 120px ;
+
+    /* alinea la grilla completa */
+    justify-content: center ;
+
+    /* Alinea el contenido */
+    /* horizontal */
+    justify-items: center;
+    /* vertical */
+    align-items: center;
+
+
+    column-gap: 5px;
+
+}
+
+.titulo-grid{
+    grid-area: titulo;
+    text-decoration: underline;
+    color: #8E1616;
+}
+.burger-grid{
+    grid-area: burger;
+    border-radius: 10px;
+}
+.parrafo-uno{
+    grid-area: texto1;
+}
+.papas-grid{
+    grid-area: papas;
+}
+.parrafo-dos{
+    grid-area: texto2;
+}
+.parrafo-tres{
+    grid-area: texto3;
+}
+
+.img-celu{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer{
+    background-color: #ffbc0d;
+    color: #8E1616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    width: 50px;
+    margin: 10px;
+}
+
+.wp{
+    width: 50px;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+}
+
+
+
+/* media queries */
+
+/* celulares/mobile */
+
+@media (max-width:480px){
+   header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+   }
+
+   nav{
+        width: 80%;
+   }
+
+   header ul{
+    margin-right: 0px;
+   }
+
+   .contenedor-grid{
+    grid-template-areas: 
+    "titulo"
+    "texto1"
+    "papas"
+    "texto2"
+    "burger";
+    grid-template-columns: 95%;
+    grid-template-rows: 80px 100px 120px 100px 250px;
+   }
+
+   .parrafo-tres{
+    display: none;
+   }
+
+   .img-celu{
+    grid-area: burger;
+    display: inline-block;
+   }
+    .burger-grid{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* tablet */
+/* @media (min-width:481px) and (max-width:768px){
+    body{
+        background-color: tomato;
+    }
+} */
